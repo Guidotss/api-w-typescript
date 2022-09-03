@@ -1,6 +1,7 @@
 import express from 'express';
 import TaskRouter from './routes/task.routes';
 import './dataBase/connect' 
+import './models/tasks'
 
 const app = express();
 

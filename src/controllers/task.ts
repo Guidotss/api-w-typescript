@@ -1,6 +1,6 @@
-import { TaskModel } from "../models/tasks"; 
+import TaskModel from "../models/tasks";
 
-async function getAll(): Promise<Object> {
-    const tasks = await TaskModel.find();
+export async function getAll(): Promise<Object> {
+    const tasks = await TaskModel.find(); 
     return tasks;
 }

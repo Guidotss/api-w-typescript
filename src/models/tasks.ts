@@ -2,16 +2,21 @@ import { prop, getModelForClass } from "@typegoose/typegoose";
 
 
 export class Task{
-    @prop()
-    name:string;
-
-    @prop()
-    description:string;
-
-    @prop()
-    completed:boolean;
+    @prop({required:true})
+    public title:string;
+    @prop({required:true})
+    public description:string;
 }
 
-export const TaskModel = getModelForClass(Task);
+const TaskModel = getModelForClass(Task);
+
+export default TaskModel;
+
+/* async function getAll(): Promise<Object | undefined> {
+    const tasks = await TaskModel.find();
+    return tasks;
+} */
+
+
 
 
