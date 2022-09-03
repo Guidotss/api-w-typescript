@@ -1,3 +1,3 @@
 export * from "./navBar/NavBar"
-export * from "./form/Form"
+export * from "./forms/AddForm"
 export * from "./tasks/TaskGrid"

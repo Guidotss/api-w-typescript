@@ -5,7 +5,7 @@ import './estilos.css'
 
 
 
-export const Form = ({ closeModalAddTodo }) => {
+export const AddForm = ({ closeModalAddTodo }) => {
 
   const {input,onIputChange,reset} = useForm({
     title:"",
