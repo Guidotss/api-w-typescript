@@ -17,7 +17,7 @@ router.get('/', async (req,res) => {
 
 
 
-router.post('/tak',(req,res) => {
+router.post('/task',(req,res) => {
     const newTask = createTask(req.body)
     res.redirect('/');
 });

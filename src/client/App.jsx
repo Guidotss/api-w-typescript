@@ -6,6 +6,7 @@ import { TaskGrid, Navbar, Form } from './components/barrel.file'
 function App() {
   
   const { renderTodo,openModalAddTodo,closeModalAddTodo } = useRenderTodo()
+  const [] = useState(false)
 
   return (
     <div className="App">

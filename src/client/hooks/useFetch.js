@@ -20,6 +20,7 @@ export const useFetch = () => {
 
 
     return{
+        setData,
         data,
         loading,
     }

@@ -12,8 +12,13 @@ export const useForm = (initialState={}) => {
         }); 
     }
 
+    const reset = () => {
+        setInput(initialState);
+    }
+
     return {
         input,
         onIputChange,
+        reset
     }
 }

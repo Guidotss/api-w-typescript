@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useForm,useRenderTodo } from "../../hooks/barrel.file";
+import { useForm,useRenderTodo,useTodo } from "../../hooks/barrel.file";
 import './estilos.css'
 
 
@@ -7,10 +7,12 @@ import './estilos.css'
 
 export const Form = ({ closeModalAddTodo }) => {
 
-  const {input,onIputChange,} = useForm({
+  const {input,onIputChange,reset} = useForm({
     title:"",
     description:""
   });
+
+  const { handleAddTodo } = useTodo();
 
   const {title , description}  = input; 
 
@@ -21,8 +23,8 @@ export const Form = ({ closeModalAddTodo }) => {
       title,
       description,
     }
-
-    console.log(newTask);
+    handleAddTodo(newTask);
+    reset();
   }
 
 
