@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const createTask = async (task) => {
+export const createTask = async (task) => {
     await axios.post("http://localhost:8080"); 
 }
 

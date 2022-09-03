@@ -8,13 +8,13 @@ export const useFetch = () => {
     const getTask = async () => {
         const tasks = await getTasks();
         setData(tasks);
-        setLoading(true);
+        setLoading(false);
     }
 
 
     useEffect(() => {
         getTask();
-        setLoading(false);
+        setLoading(true);
     },[]); 
 
 

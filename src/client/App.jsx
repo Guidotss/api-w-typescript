@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRenderTodo } from './hooks/barrel.file'
-import { Task, Navbar, Form } from './components/barrel.file'
+import { TaskGrid, Navbar, Form } from './components/barrel.file'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
        {
         renderTodo 
         ? <Form closeModalAddTodo={ closeModalAddTodo }/>
-        : <Task/>
+        : <TaskGrid/> 
        }
     </div>
   )
