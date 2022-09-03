@@ -1,0 +1,9 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 10px;
+}
+input{
+    margin: 10px;
+}

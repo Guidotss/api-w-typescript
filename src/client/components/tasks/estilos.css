@@ -1,0 +1,21 @@
+.tasks{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card{
+    margin-bottom: 20px;
+    display: flex !important;
+}
+.card-title{
+    align-self: center;
+    font-size: 2.5rem;
+}
+.btn-group button{
+    margin: 10px;
+    border: none;
+}
+h5{
+    font-size: 20px;
+}
