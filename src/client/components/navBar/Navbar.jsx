@@ -1,14 +1,16 @@
+import { useEffect } from 'react'
+import { Form } from '../form/Form'
+import { useRenderTodo, useForm } from '../../hooks/barrel.file'
 import "./estilos.css"; 
 
-export const Navbar = () => {
+
+
+export const Navbar = ({ openModalAddTodo, renderTodo }) => {
   return (
     <header>
         <h1>Task app</h1>
         <nav>
-            <form action="/task" method="post">
-                <input className="input input-bordered w-full max-w-xs" type="text" name="tasName" />
-                <input className="input input-bordered w-full max-w-xs" type="text" name="description" />
-            </form>
+          <button className="btn btn-outline btn-error" onClick={ openModalAddTodo }>Add Task</button>
         </nav>
     </header>
   )

@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
-export const useForm = (initialState = {}) => {
-    const [task, setTask] = useForm(initialState);
+export const useForm = (initialState={}) => {
+    const [input, setInput] = useState(initialState);
 
     const onIputChange = ({target}) => {
         const { name , value } = target 
 
         setInput({
-            ...task,
+            ...input,
             [name]: value
         }); 
     }
 
     return {
         input,
-        onIputChange
+        onIputChange,
     }
 }

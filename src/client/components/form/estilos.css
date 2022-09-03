@@ -1,0 +1,36 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    width: 500px;
+    margin: auto;
+}
+input{
+    width: 350px;
+}
+.addTodo{
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeFormAddTodo{
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 310px;
+    top: 2px;
+    border: none;
+}
