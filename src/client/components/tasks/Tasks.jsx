@@ -2,7 +2,7 @@ import { useFetch } from '../../hooks/barrel.file'
 import { TaskItem } from "./TaskItem"
 import "./estilos.css"
 
-export const Tasks =  () => {
+export const Tasks =  ({ openModalEditTodo }) => {
 
   const { data,loading } = useFetch();
 
@@ -14,7 +14,7 @@ export const Tasks =  () => {
     <section>
       {
         data.map((task) => {
-          return <TaskItem key={task._id} data={task}/>
+          return <TaskItem key={task._id} data={task} openModalEditTodo={ openModalEditTodo } />
         })
       }
     </section>

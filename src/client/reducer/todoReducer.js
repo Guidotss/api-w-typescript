@@ -1,4 +1,4 @@
-import { createTask,deleteTask } from "../api/task.api";
+import { createTask,deleteTask,editTask } from "../api/task.api";
 
 export const todoReducer  = async(initialState=[],action={}) => {
     switch(action.type){
@@ -12,7 +12,8 @@ export const todoReducer  = async(initialState=[],action={}) => {
             return initialState.filter(todo => todo.id !== action.payload);
 
         case "[TODO] edit todo":
-            await editTask(action.payload.id,action.payload);
+            const id = action.payload.id;
+            await editTask(id,action.payload);
             return initialState.map(todo => todo.id === action.payload.id ? action.payload : todo);
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useForm,useRenderTodo,useTodo } from "../../hooks/barrel.file";
+import { useForm,useTodo } from "../../hooks/barrel.file";
 import './estilos.css'
 
 

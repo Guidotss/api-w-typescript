@@ -26,6 +26,8 @@ router.post('/task',(req,res) => {
 router.put('/',(req,res) => {
     const { id } = req.query;
     const taskEdited = editTaskById(String(id), Object(req.body));
+    console.log(req.body);
+    
     if(taskEdited){
         res.json(taskEdited)
     }else{

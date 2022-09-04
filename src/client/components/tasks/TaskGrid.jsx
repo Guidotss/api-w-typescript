@@ -3,19 +3,15 @@ import { useFetch } from "../../hooks/useFetch"
 import { Tasks } from "./Tasks"
 import './estilos.css'
 
-export const TaskGrid = () => {
-    const { data,setData,loading } = useFetch();
-
-    useEffect(() => {
-      console.log("hola");   
-    }, [data])
+export const TaskGrid = ({ openModalEditTodo }) => {
+    const { data,setData,loading } = useFetch();  
 
   return (
     <div className="tasks">
         {
             loading
             ? <progress className="carga progress w-56"></progress>
-            : <Tasks/>
+            : <Tasks openModalEditTodo={ openModalEditTodo }/>
         }
     </div>
   )

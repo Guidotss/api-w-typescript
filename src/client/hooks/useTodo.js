@@ -12,10 +12,10 @@ export const useTodo = (initialState=[]) => {
         dispatch(action);
     }
 
-    const handleDeleteTodo = (todoId) => {
+    const handleDeleteTodo = (todo) => {
         const action ={
             type: "[TODO] delete todo",
-            payload: todoId
+            payload: todo
         }
         dispatch(action);
     }

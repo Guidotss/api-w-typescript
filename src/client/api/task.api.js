@@ -9,6 +9,11 @@ export const getTasks = async () => {
     return tasks.data;
 }
 
+export const getTask = async (id) => {
+    const task = await axios.get(`http://localhost:8080?id=${id}`);
+    return task.data;
+}
+
 export const deleteTask = async (id) => {
     await axios.delete(`http://localhost:8080?id=${String(id)}`);
 }
